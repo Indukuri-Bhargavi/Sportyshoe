@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>View Purchase Report List Below</h3> <br>
+<table border="1px">
+		<tr>
+			<th>User Name</th>
+			<th>Order Id</th>
+			<th>Date of Purchase</th>
+			<th>Order Category</th>
+		</tr>
+		
+		<tr th:each="data : ${purchaseReport}">
+			<td><span th:text="${data.userName}"> </span></td>
+			<td><span th:text="${data.orderId}"> </span></td>
+			<td><span th:text="${data.date}"> </span></td>
+			<td><span th:text="${data.category}"> </span></td> 
+		</tr> 
+	</table>
+</body>
+</html>

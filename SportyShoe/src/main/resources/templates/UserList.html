@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>View User List Below</h3> <br>
+<table border="1px">
+		<tr>
+			<th>User Name</th>
+			<th>User Id</th>
+			<th>Password</th>
+			<th>Product Booked Date </th>
+		</tr>
+		
+		<tr th:each="data : ${userList}">
+			<td><span th:text="${data.username}"> </span></td>
+			<td><span th:text="${data.userId}"> </span></td>
+			<td><span th:text="${data.password}"> </span></td>
+			<td><span th:text="${data.dateBooked}"> </span></td> 
+		</tr> 
+	</table>
+</body>
+</html>
